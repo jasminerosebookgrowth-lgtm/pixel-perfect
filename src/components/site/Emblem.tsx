@@ -32,7 +32,7 @@ export function RotatingEmblem() {
           <div key={z} className="emblem-layer emblem-edge" style={{ transform: `translateZ(${z}px)` }} />
         ))}
         <div className="emblem-layer" style={{ transform: "translateZ(8px)" }}><EmblemMark className="h-full w-full" /></div>
-        <div className="emblem-layer" style={{ transform: "rotateY(180deg) translateZ(8px)" }}><div className="h-full w-full" style={{ transform: "scaleX(-1)" }}><EmblemMark className="h-full w-full" /></div></div>
+        <div className="emblem-layer" style={{ transform: "rotateY(180deg) translateZ(8px)" }}><EmblemMark className="h-full w-full" /></div>
       </div>
     </div>
   );
