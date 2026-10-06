@@ -3,6 +3,7 @@ import { Briefcase, Brain, Users, Sprout, ArrowRight, MessageSquare, Eye, Handsh
 import hero from "@/assets/hero.jpg";
 import { Shell, SectionHead, CtaBand, meta } from "@/components/site/Layout";
 import { services } from "@/components/site/data";
+import { RotatingEmblem, PageLoader } from "@/components/site/Emblem";
 
 export const Route = createFileRoute("/")({
   head: () => meta("Daniel Trade — Smart Trading. Stronger Growth.", "Daniel Trade creates professional trading opportunities and helps clients move forward with confidence, strategy, and clarity."),
@@ -25,19 +26,21 @@ const why = [
 function Home() {
   return (
     <Shell>
+      <PageLoader />
       <section className="relative overflow-hidden bg-primary-deep text-on-dark">
-        <img src={hero} alt="" width={1280} height={1280} className="absolute inset-0 h-full w-full object-cover opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/85 to-transparent" />
-        <div className="container-x relative py-24 md:py-36">
+        <img src={hero} alt="" width={1280} height={1280} className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-deep via-primary-deep/85 to-primary-deep/40" />
+        <div className="container-x relative grid items-center gap-12 py-20 md:py-32 lg:grid-cols-[1.4fr_1fr]">
           <div className="max-w-2xl animate-rise">
             <p className="eyebrow">Daniel Trade</p>
             <h1 className="mt-5 text-5xl leading-[1.05] md:text-7xl">Smart Trading. Stronger Growth. <span className="text-gold italic">Better Opportunities.</span></h1>
-            <p className="mt-6 max-w-xl text-lg text-on-dark-muted">Daniel Trade is focused on creating professional trading opportunities and helping clients move forward with confidence, strategy, and clarity.</p>
+            <p className="mt-6 max-w-xl text-lg text-on-dark-muted">Professional trading and strategic business solutions designed around opportunity, clarity, and growth.</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contact" className="btn btn-gold">Get Started <ArrowRight className="h-4 w-4" /></Link>
-              <Link to="/about" className="btn btn-outline-light">Learn More</Link>
+              <Link to="/services" className="btn btn-outline-light">Explore Services</Link>
             </div>
           </div>
+          <div className="flex justify-center lg:justify-end"><RotatingEmblem /></div>
         </div>
       </section>
 
