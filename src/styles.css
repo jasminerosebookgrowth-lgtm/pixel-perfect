@@ -101,7 +101,7 @@
 @utility emblem-stage { position: relative; width: 15rem; height: 15rem; perspective: 900px; @media (min-width: 768px) { width: 19rem; height: 19rem; } }
 @utility emblem-glow { position: absolute; inset: -18%; border-radius: 9999px; background: radial-gradient(circle, oklch(0.76 0.13 88 / 0.28), oklch(0.33 0.12 310 / 0.2) 45%, transparent 70%); filter: blur(10px); }
 @utility emblem-spin { position: absolute; inset: 0; transform-style: preserve-3d; animation: emblem-turn 9s cubic-bezier(.45,0,.25,1) infinite; filter: drop-shadow(0 20px 40px oklch(0.12 0.05 305 / 0.6)); }
-@utility emblem-layer { position: absolute; inset: 0; backface-visibility: hidden; }
+@utility emblem-layer { position: absolute; inset: 0; backface-visibility: hidden; & > svg { backface-visibility: hidden; } }
 @utility emblem-edge { border-radius: 22%; background: linear-gradient(135deg, var(--gold), oklch(0.55 0.1 80)); backface-visibility: visible; }
 @keyframes emblem-turn { 0%, 18% { transform: rotateY(0deg); } 100% { transform: rotateY(360deg); } }
 
