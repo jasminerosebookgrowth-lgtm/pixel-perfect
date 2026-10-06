@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { EmblemMark } from "./Emblem";
 
 export const EMAIL = "jasminerosebookgrowth@gmail.com";
 
@@ -16,7 +17,7 @@ const nav = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label="Daniel Trade home">
-      <span className="grid h-9 w-9 place-items-center rounded-full border border-gold bg-primary font-serif text-lg font-semibold text-gold">D</span>
+      <EmblemMark className="h-9 w-9" />
       <span className="font-serif text-2xl font-semibold tracking-tight">Daniel <span className="text-gold">Trade</span></span>
     </Link>
   );
